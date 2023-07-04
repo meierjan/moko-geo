@@ -77,6 +77,7 @@ val locationTracker = LocationTracker(
 val viewModel = TrackerViewModel(locationTracker)
 
 // bind tracker to lifecycle
+// Important: make sure .bind(*) is caled before .startTracking()
 viewModel.locationTracker.bind(lifecycle, this, supportFragmentManager)
 ```
 
